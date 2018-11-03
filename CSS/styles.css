@@ -1,0 +1,286 @@
+* { box-sizing : border-box;
+}
+
+body {
+  font-family: Morganite;/*add fallback fonts*/
+  font-weight: 300;
+  background: white url('../Ressources/Images/shotaro-kaneda-final.png') no-repeat fixed top center/85%;
+  background-size: auto 900px; 
+  min-height: 550px;
+}
+   
+p{
+  font-family: 'Raleway', sans-serif;
+  font-size : 16px;
+  margin: 0 30px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+a {
+  color: white;
+}
+
+#firstPage {
+  height: 100vh;
+  max-width: 500px;
+  margin: auto;
+}
+
+header div {
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#logo{
+  margin-top: 26%;
+  width: 100%;
+}
+
+h1{
+  color : #2B2D42;
+}
+
+#mo {
+  font-size: 53px;
+}
+
+#ani {
+  font-size: 47px;
+}
+
+#jap {
+  font-size: 94px;
+}
+
+ul{
+  font-size: 100px;
+}
+
+#menu{
+  height:100vh;
+  background: url('../Ressources/Images/fleche_2.svg') no-repeat fixed;
+  background-size: contain;
+
+}
+
+#menu li{
+  margin: 30% 0;
+}
+
+#menu a{
+  background-color: #DA1D1F;
+  padding: 0 10px;
+}
+
+#menu li #analyseMenu {
+  background-color:#2B2D42;
+}
+
+.arrow img{
+  width: 110px;
+  height: 60px;
+}
+
+.arrow p {
+  font-size : 14px;
+}
+
+h2 {
+  font-size: 127px;
+  font-style: italic;
+}
+
+#histoire{
+  background-color: #DA1D1F;
+  padding-bottom: 20px;
+  color: white;
+}
+
+#histoire h2{
+  transform: rotate(90deg);
+  height: 100%;
+  align-self: center;
+  
+}
+
+#subHeading{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+#subHeading img{
+  max-height: 400px;
+  width: auto;
+} 
+
+#pill{
+  background: linear-gradient(to bottom, #DA1D1F 47%, rgba(0,0,0,0) 47%);
+}
+
+#pill img{
+  max-width: 500px;
+}
+
+#personnages{
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+#personnages h2 {
+  transform: rotate(-30deg);
+  text-align: right;
+  color: #DA1D1F;
+  margin-bottom: 50px;
+}
+
+#personnages p{
+  margin-bottom: 30px;
+}
+
+.entetePerso{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.entetePerso.even{
+  flex-direction: row-reverse;
+}
+
+/* #kanji{
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, #2B2D42 30%);
+  padding-bottom: 40px;
+} */
+
+#analyse {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, #2B2D42 2%);
+  color: white;
+  padding-bottom: 50px;
+}
+
+#analyse h2{
+  color: #DA1D1F;
+}
+
+#analyse section{
+  margin-bottom : 30px;
+}
+
+.nomPerso {
+font-weight: 100;
+font-style: italic;
+font-size: 65px;
+}
+
+.imagePerso {
+  width: 210px;
+  height: 210px;
+}
+
+#analyse h3 {
+  font-size: 60px;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+#analyse p:last-of-type{
+  margin-bottom:0;
+}
+
+#footerImage{
+  background: linear-gradient(to bottom, #2B2D42 20%, rgba(0,0,0,0) 20%);
+  text-align: center;
+}
+footer img{
+  height: 80vh;
+  width: auto;
+}
+
+#footerText{
+  background-color: #2B2D42;
+  font-family: Morganite;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  line-height: normal;
+  
+}
+
+img{
+  width:100%;
+}
+
+
+@media (min-width: 550px){
+  #histoire h2{
+    transform: rotate(0deg);
+    align-self: center;
+    margin-left: 30px;
+    font-size: 25vw;
+  }
+}
+@media (min-width: 850px){
+  #personnages h2{
+    margin-top: 8%;
+  }
+
+  .entetePerso{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  #sho .entetePerso{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #sho h3{
+    margin-right:30px;
+  }
+  .entetePerso.even{
+    flex-direction: column;
+  }
+
+  #persos{
+  margin-top: -10%;
+  display:grid;
+  grid-template-rows: repeat(auto,3);
+  grid-template-columns: 4fr 5fr;
+  grid-template-areas: "sho sho" "kei tet"  "col aki";
+  }
+  #sho{
+    grid-area: sho;
+  }
+  #tet{
+    grid-area: tet;
+  }
+  #col{
+    grid-area: col;
+  }
+  #aki{
+    grid-area: aki;
+  }
+}
+
+@media (min-width: 1000px){
+  #analyseParts{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+}
