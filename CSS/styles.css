@@ -4,8 +4,8 @@
 body {
   font-family: Morganite;/*add fallback fonts*/
   font-weight: 300;
-  background: white url('../Ressources/Images/shotaro-kaneda-final.png') no-repeat fixed top center/85%;
-  background-size: auto 900px; 
+  background: white url('../Ressources/Images/shotaro-kaneda-final.png') no-repeat fixed top center;
+  background-size: auto 140vh; 
   min-height: 550px;
 }
    
@@ -24,8 +24,6 @@ a {
 
 #firstPage {
   height: 100vh;
-  max-width: 500px;
-  margin: auto;
 }
 
 header div {
@@ -38,8 +36,9 @@ header div {
 }
 
 #logo{
-  margin-top: 26%;
+  margin-top: auto;
   width: 100%;
+  max-width: 500px;
 }
 
 h1{
