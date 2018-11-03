@@ -38,6 +38,7 @@ header div {
 #logo{
   margin-top: 20vh;
   width: 90vw;
+  max-width: 550px;
 }
 
 h1{
