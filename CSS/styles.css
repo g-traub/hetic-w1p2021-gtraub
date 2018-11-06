@@ -8,6 +8,7 @@ body {
   background-size: auto 140vh; 
   min-height: 550px;
   overflow-x: hidden;
+  width :100%;
 }
    
 p{
