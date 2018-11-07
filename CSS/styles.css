@@ -1,3 +1,9 @@
+@keyframes jump {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 * { box-sizing : border-box;
 }
 
@@ -8,7 +14,6 @@ body {
   background-size: auto 140vh; 
   min-height: 550px;
   overflow-x: hidden;
-  width :100%;
 }
    
 p{
@@ -63,33 +68,41 @@ ul{
   font-size: 100px;
 }
 
-#menu{
+.menu{
   height:100vh;
   background: url('../Ressources/Images/fleche_2.svg') no-repeat fixed;
   background-size: contain;
-
+  text-align: center;
 }
 
-#menu li{
+.menu li{
   margin: 30% 0;
 }
 
-#menu a{
+.menu a{
   background-color: #DA1D1F;
   padding: 0 10px;
 }
 
-#menu li #analyseMenu {
-  background-color:#2B2D42;
+.menu li:hover{
+  transform: scaleX(1.1);
+  transition: transform 0.1s;
 }
 
 .arrow img{
-  width: 110px;
+  animation: 1s jump ease-out infinite;
+  width: 110px; 
   height: 60px;
 }
 
 .arrow p {
   font-size : 14px;
+  color: black;
+}
+
+.arrow:hover p{
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 h2 {
@@ -110,23 +123,39 @@ h2 {
   
 }
 
-#subHeading{
+.subHeading{
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
-#subHeading img{
-  width: auto;
-  height: 350px;
+.subHeading img{
+  width: 29%;
+  height: auto;
+  margin-bottom: 4%;
+  transform: translateX(-210%);
+  opacity: 0;
+  transition: opacity 1s, transform 2s;
 }
 
-#pill{
+img.is-reached-moto{
+  opacity: 1;
+  transform: none;
+}
+
+.pill{
   background: linear-gradient(to bottom, #DA1D1F 47%, rgba(0,0,0,0) 47%);
 }
 
-#pill img{
+.pill img{
   max-width: 500px;
+  transform: translateY(3px);
+  opacity: 0;
+  transition: transform 1.5s, opacity 0.5s;
+}
+.is-reached-img{
+  transform: translateY(3px) !important;
 }
 
 #personnages{
@@ -139,6 +168,12 @@ h2 {
   text-align: right;
   color: #DA1D1F;
   margin-bottom: 50px;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+.is-reached-perso{
+  opacity: 1 !important;
 }
 
 #personnages p{
@@ -156,6 +191,15 @@ h2 {
   flex-direction: row-reverse;
 }
 
+.kanji{
+  transform: scale(1.3);
+  opacity:0;
+  transition: opacity 0.5s, transform 1s;
+}
+.is-reached-kanji{
+  transform: none;
+  opacity: 1;
+}
 #analyse {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, #2B2D42 2%);
   color: white;
@@ -211,14 +255,13 @@ footer img{
   padding: 20px;
   margin: 0;
   line-height: normal;
-  
 }
 
 img{
   width:100%;
 }
 @media (max-width: 420px){
-  #subHeading img{
+  .subHeading img{
     display: none;
   }  
   #histoire h2{
@@ -279,6 +322,12 @@ img{
   }
   #aki{
     grid-area: aki;
+  }
+}
+
+@media (min-width: 950px){
+  .pill img{
+  transform: translateX(85%) translateY(3px);
   }
 }
 

@@ -6,8 +6,10 @@
 		<link rel="stylesheet" type="text/css" href="CSS/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/fonts.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link rel="shortcut icon" type="image/x-icon" href="https://vignette.wikia.nocookie.net/lego-dimensions-customs/images/a/a6/Akira_Logo.png/revision/latest?cb=20180121080515"/>
+		<script defer type='text/javascript' src='Ressources/Lib/noframework.waypoints.js'></script>
+		<script defer type='text/javascript' src='JS/akira.js'></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta charset='utf-8' name='description' content="Article sur le film d'animation japonais Akira du réalisateur Katsuhiro Ōtomo."/>
 	</head>
@@ -21,15 +23,17 @@
 					<h1 id='ani'>L'ANIMATION</h1>
 					<h1 id='jap'>JAPONAISE</h1>
 				</div>
-				<div class='arrow'>
-					<a href="#menu"><img src="Ressources/Images/Sans titre - 1.svg" alt="fleche vers le bas"/></a>
-					<p>Commencez à scroller</p>
-				</div>
+				<a href="#menu">
+					<div id='arrowZone' class='arrow'>
+						<img src="Ressources/Images/Sans titre - 1.svg" alt="fleche vers le bas"/>
+							<p>Commencez à scroller</p>
+					</div>
+				</a>
 			</div>
-			<div  id='menu'>
+			<div  id='menu' class='menu'>
 				<nav>
 					<ul>
-						<li><a href="#histoire">Histoire</a></li>
+						<li id='moto-waypoint'><a href="#histoire">Histoire</a></li>
 						<li><a href="#personnages">Personnages</a></li>
 						<li><a href="#analyse" id='analyseMenu'>Analyse</a></li>
 					</ul>
@@ -40,9 +44,9 @@
 		<main>
 			<article>
 				<section id="histoire" class="part">
-					<div id= 'subHeading'>
-						<h2>Histoire</h2>
-						<img src="Ressources/Images/akira-vinilo-decorativo-blanc.png" alt='shotaro kaneda et sa moto'/>
+					<div class= 'subHeading'>
+							<h2>Histoire</h2>
+						<img src="Ressources/Images/akira-moto-blanc.png" alt='shotaro kaneda et sa moto'/>
 					</div>
 					<p>
 					Tokyo est détruite par une mystérieuse explosion en décembre 1982 et cela déclenche la Troisième Guerre mondiale, avec la destruction de nombreuses cités par des armes nucléaires.
@@ -54,12 +58,12 @@
 					En parallèle se nouent des intrigues politiques : l’armée essaye par tous les moyens de continuer le projet en espérant percer le secret de la puissance d’Akira, un enfant doté de pouvoirs psychiques extraordinaires (et de la maîtriser pour s'en servir par la suite), tandis que les politiciens ne voient pas l’intérêt de continuer à allouer de l’argent à un projet de plus de 30 ans qui n'a jamais rien rapporté. Le phénomène Akira suscite également l’intérêt d’un mouvement révolutionnaire qui veut se l’approprier à des fins religieuses (Akira serait considéré comme un « sauveur » par ses fidèles). Tetsuo va se retrouver malgré lui au centre d’une lutte entre les révolutionnaires et le pouvoir en place. 
 					</p>
 				</section>
-				<div id='pill'>
+				<div class='pill' id='pill'>
 				<img src='Ressources/Images/alth-bad-for-education-png-2.png' alt="pilule"/>
 				</div>
 
 				<section id="personnages" class="part">
-						<h2>Personnages</h2>
+							<h2>Personnages</h2>
 					<div id="persos">
 						<section id='sho'>
 							<div class="entetePerso">
@@ -112,7 +116,7 @@
 				</section>
 
 				<section id="analyse" class="part">
-					<img src='Ressources/Images/akiratxt.png' alt='akira en kanji' id='kanji'/>
+					<img src='Ressources/Images/akiratxt.png' alt='akira en kanji' class='kanji' id='kanji'/>
 					<h2>Analyse</h2>
 					<div id="analyseParts">
 						<section>
