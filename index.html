@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/fonts.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-		<link rel="shortcut icon" type="image/x-icon" href="https://vignette.wikia.nocookie.net/lego-dimensions-customs/images/a/a6/Akira_Logo.png/revision/latest?cb=20180121080515"/>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="https://vignette.wikia.nocookie.net/lego-dimensions-customs/images/a/a6/Akira_Logo.png/revision/latest?cb=20180121080515"/> -->
 		<script defer type='text/javascript' src='Ressources/Lib/noframework.waypoints.js'></script>
 		<script defer type='text/javascript' src='JS/akira.js'></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -16,10 +16,10 @@
 
 	<body>
 		<header>
-				<ul class='verticalMenu'>
-						<li class='dot'></li>
-						<li class='dot'></li>
-						<li class='dot'></li>
+				<ul class='verticalMenu fixed'>
+						<a href='#histoire' id='link1'><li class='dot' id='dot1'></li></a>
+						<a href='#pill' id='link2'><li class='dot' id='dot2'></li></a>
+						<a href='#analyse' id='link3'><li class='dot' id='dot3'></li></a>
 					</ul>
 			<div id='firstPage'>
 				<img id="logo" src="Ressources/Images/Logo_Akira.svg.png" alt="logo akira"/>
@@ -39,7 +39,7 @@
 				<nav>
 					<ul>
 						<li id='moto-waypoint'><a href="#histoire">Histoire</a></li>
-						<li><a href="#personnages">Personnages</a></li>
+						<li><a href="#pill">Personnages</a></li>
 						<li><a href="#analyse" id='analyseMenu'>Analyse</a></li>
 					</ul>
 				</nav>
@@ -67,7 +67,7 @@
 				<img src='Ressources/Images/alth-bad-for-education-png-2.png' alt="pilule"/>
 				</div>
 
-				<section id="personnages" class="part">
+				<section id="personnages" class="part" data-midnight="redBlue">
 							<h2>Personnages</h2>
 					<div id="persos">
 						<section id='sho'>
@@ -120,7 +120,7 @@
 					</div>
 				</section>
 
-				<section id="analyse" class="part">
+				<section id="analyse" class="part" data-midnight="whiteRed">
 					<img src='Ressources/Images/akiratxt.png' alt='akira en kanji' class='kanji' id='kanji'/>
 					<h2>Analyse</h2>
 					<div id="analyseParts">

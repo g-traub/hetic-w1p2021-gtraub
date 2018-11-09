@@ -18,19 +18,22 @@ body {
 }
 .verticalMenu {
   position : fixed;
-  left: 10px;
+  left: 15px;
   top: 25%;
   opacity:0;
-  transition: opacity 0.3s;
+  transition: opacity 0.1s;
 }
 .dot {
-  background-color: black;
+  background-color: white;
   width: 25px;
   height: 25px;
+  border: #DA1D1F solid 5px;
   border-radius: 50%;
   margin: 60px 0;
 }
-
+.disabled{
+  background-color: #2B2D42;
+}
 p{
   font-family: 'Raleway', sans-serif;
   font-size : 16px;
@@ -159,11 +162,6 @@ h2 {
   transition: opacity 1s, transform 2s;
 }
 
-img.is-reached-moto{
-  opacity: 1;
-  transform: none;
-}
-
 .pill{
   background: linear-gradient(to bottom, #DA1D1F 47%, rgba(0,0,0,0) 47%);
 }
@@ -174,9 +172,6 @@ img.is-reached-moto{
   opacity: 0;
   transition: transform 1.5s, opacity 0.5s;
   margin-left: 40px;
-}
-.is-reached-img{
-  transform: translateY(3px) !important;
 }
 
 #personnages{
@@ -195,8 +190,16 @@ img.is-reached-moto{
 
 .is-reached{
   opacity: 1 !important;
+  transform: none !important;
 }
 
+.is-reached-img{
+  transform: translateY(3px) !important;
+}
+
+.is-reached-h2{
+  opacity : 1 !important;
+}
 #personnages p{
   margin-bottom: 30px;
 }
@@ -213,14 +216,12 @@ img.is-reached-moto{
 }
 
 .kanji{
+  margin-left: 20px;
   transform: scale(1.3);
   opacity:0;
   transition: opacity 0.5s, transform 1s;
 }
-.is-reached-kanji{
-  transform: none;
-  opacity: 1;
-}
+
 #analyse {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 2%, #2B2D42 2%);
   color: white;
@@ -267,11 +268,6 @@ font-size: 65px;
   
   opacity:0;
   transition: opacity 2.2s ease-out, transform 1.2s;
-}
-
-.is-reached-personnalInfo{
-  opacity: 1 !important;
-  transform: none !important;
 }
 
 #footerImage{
